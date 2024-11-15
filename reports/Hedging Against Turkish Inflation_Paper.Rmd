@@ -1,7 +1,31 @@
 ---
 title: "Hedging Against Turkish Inflation"
 author: "Selin Acar, Necati Furkan Çolak, Denis Lasser"
-date: "2024-11-15"
-output: pdf_document
+date: "December 2024"
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
 ---
+
+# Introduction
+TEXT TEXT TEXT
+
+# Methodology
+## Data Collection
+TEXT TEXT TEXT
+
+## Analysis Techniques
+TEXT TEXT TEXT
+
+# Results
+TEXT TEXT TEXT
+
+# Conclusion
+TEXT TEXT TEXT
+
+\pagebreak
+
+# Sources
+TEXT TEXT TEXT
 
