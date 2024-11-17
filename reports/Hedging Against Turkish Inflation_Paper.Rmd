@@ -14,8 +14,28 @@ The ongoing economic crisis in Türkiye has been characterized by high inflation
 This study aims to analyze which assets, as well as which portfolio of assets, would have been the most effective in hedging against Turkish inflation.
 
 # Methodology
+This study examines the effectiveness of various assets as hedges against Turkish inflation, using monthly data from January 2018 to September 2024. The monthly frequency was selected for the following reasons:
+
+1. The use of monthly data allows for the smoothing of short-term fluctuations. This facilitates the identification of more coherent relationships between inflation and asset returns. 
+2. Key economic indicators, including inflation rates, are typically reported on a monthly basis. By aligning asset data with this frequency, the analysis maintains consistency and relevance in relation to reported inflation rates.
+3. The influence of short-term trading anomalies, seasonal effects and temporary market shocks on weekly data must be acknowledged. Monthly data minimizes the impact of these irregularities, thereby providing a more stable basis for the analysis of assets as potential inflation hedges.
+
 ## Data Collection
-TEXT TEXT TEXT
+This study includes a range of assets to capture different potential hedging mechanisms against inflation. 
+
+Following indices were sourced from Bloomberg:
+
+- TUCXEFYY Index: This index tracks the Turkish CPI (Consumer Price Index) excluding categories such as food, energy, alcohol, and tobacco. This represents the core inflation rate and excludes the most volatile components of the CPI, given that the aforementioned categories are often subject to short-term price fluctuations due to external factors. In the context of hedging against inflation, it is more meaningful to focus on core inflation, as short-term fluctuations in volatile categories can distort the true underlying inflation rate. Therefore, this index serves as the benchmark and allows for direct comparison of the other assets against inflation. 
+
+- XU100 Index (BIST 100): This index comprises the 100 largest companies traded at the Borsa Istanbul and provides insight into the response of Turkish stocks to inflation.
+
+- GTTRY10YR (10-Year Turkish Government Bond):  Long-term government bonds, such as the 10-year Turkish government bond, are traditionally considered low-risk investments. Including this bond in the analysis allows for an assessment of the inflation risk premium embedded in Turkish government debt.
+
+- XAUTRY: This index represents the price of one ounce of gold quoted in Turkish Lira (TRY).  Gold is often seen as a traditional hedge against inflation due to its historical retention of value. Including this index helps assess how well gold preserves purchasing power in Türkiye, especially during periods of high inflation or currency volatility.
+
+- XBT BGN: Bitcoin is included in the analysis as an alternative inflation hedge, with prices analyzed in TRY to assess its effectiveness in preserving purchasing power against Turkish inflation.
+
+Furthermore, the house price index data was obtained from the Turkish Central Bank’s EVDS database. Specifically, the TP KFE TR-1 series was used, which tracks nationwide residential property prices in Türkiye. Real estate is often considered a strong inflation hedge, as property values and rental income tend to rise with inflation. This index allows an analysis of the effectiveness of the real estate sector in preserving purchasing power during inflationary periods.
 
 ## Analysis Techniques
 TEXT TEXT TEXT
