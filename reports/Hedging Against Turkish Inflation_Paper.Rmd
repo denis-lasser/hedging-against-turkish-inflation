@@ -38,7 +38,11 @@ Following indices were sourced from Bloomberg:
 Furthermore, the house price index data was obtained from the Turkish Central Bank’s EVDS database. Specifically, the TP KFE TR-1 series was used, which tracks nationwide residential property prices in Türkiye. Real estate is often considered a strong inflation hedge, as property values and rental income tend to rise with inflation. This index allows an analysis of the effectiveness of the real estate sector in preserving purchasing power during inflationary periods.
 
 ## Analysis Techniques
-TEXT TEXT TEXT
+The analysis consists of two main steps. First, the effectiveness of each individual asset in providing a hedge is evaluated. Subsequently, an optimal hedging portfolio is determined.
+
+The first step is to calculate the excess return for each asset relative to the Turkish inflation rate. Excess return is calculated as the asset's return minus the inflation rate over the same period. This reflects the asset's ability to preserve purchasing power. Assets with consistently positive excess returns are considered to have stronger hedging characteristics, as they maintain or increase purchasing power above inflation. This initial analysis allows for an assessment of each asset's stand-alone ability to serve as an inflation hedge.
+
+Building on the individual asset analysis, the next step applies Markowitz portfolio optimization to construct an optimal portfolio that maximizes the hedging effectiveness against Turkish inflation. Markowitz optimization, also referred to as Mean-Variance Optimization, determines the portfolio composition that achieves the highest return for a given level of risk / the lowest risk for a given return. In the context of this study, the aim is to construct a portfolio that minimizes inflation risk while providing stable excess returns. By balancing a range of assets,this optimization creates a portfolio that preserves purchasing power against inflation more effectively than any individual asset alone.
 
 # Results
 TEXT TEXT TEXT
