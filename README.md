@@ -59,3 +59,14 @@ This project looks at what asset classes would have helped a turkish investor he
 
 --------
 
+## How to run docker container
+
+Prerequisites: Docker is installed
+
+From the root directory, run this command in bash to build the custom image used in this project:
+docker build -t hedging-inflation .
+
+Once the image is built (or you have already built if previously), run this command to start the docker container:
+docker run -p 8888:8888 -v "$(pwd):/home/jovyan/app" hedging-inflation
+
+The terminal will provide a link, which you can use to open the jupyter notebook in your browser.
