@@ -40,7 +40,27 @@ Furthermore, the house price index data was obtained from the Turkish Central Ba
 ## Analysis Techniques
 The analysis consists of two main steps. First, the effectiveness of each individual asset in providing a hedge is evaluated. Subsequently, an optimal hedging portfolio is determined.
 
-The first step is to calculate the excess return for each asset relative to the Turkish inflation rate. Excess return is calculated as the asset's return minus the inflation rate over the same period. This reflects the asset's ability to preserve purchasing power. Assets with consistently positive excess returns are considered to have stronger hedging characteristics, as they maintain or increase purchasing power above inflation. This initial analysis allows for an assessment of each asset's stand-alone ability to serve as an inflation hedge.
+The first step is to calculate the excess return for each asset relative to the Turkish inflation rate.
+
+This calculation differs depending on whether the asset is denominated in TRY or USD:
+
+- Asset denominated in TRY:
+
+\[
+\text{Excess Return}= \text{Nominal Return} - \text{Inflation Rate}
+\]
+
+Excess return is calculated as the asset's return minus the Turkish inflation rate over the same period. This straightforward calculation reflects the direct impact of inflation on TRY-denominated assets.
+
+- Asset denominated in USD: 
+
+\[
+\text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
+\]
+
+In this case, Turkish inflation is used to adjust the nominal return. Real returns for USD-denominated assets, such as gold and Bitcoin, are calculated using Turkish inflation rates to assess their effectiveness in preserving purchasing power in Türkiye. While nominal returns in USD account for global factors, real returns adjusted for Turkish inflation provide a clearer measure of an asset's ability to hedge against the specific inflationary pressures experienced in Türkiye.
+
+This first step evaluates each asset's ability to preserve purchasing power. Assets with consistently positive excess returns are considered to have stronger hedging characteristics, as they maintain or increase purchasing power above inflation. This initial analysis provides a basis for assessing each asset's stand-alone ability to serve as an inflation hedge.
 
 Building on the individual asset analysis, the next step applies Markowitz portfolio optimization to construct an optimal portfolio that maximizes the hedging effectiveness against Turkish inflation. Markowitz optimization, also referred to as Mean-Variance Optimization, determines the portfolio composition that achieves the highest return for a given level of risk / the lowest risk for a given return. In the context of this study, the aim is to construct a portfolio that minimizes inflation risk while providing stable excess returns. By balancing a range of assets,this optimization creates a portfolio that preserves purchasing power against inflation more effectively than any individual asset alone.
 
