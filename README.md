@@ -4,12 +4,16 @@ The ongoing economic crisis in Türkiye has been characterized by high inflation
 
 This study aims to analyze which assets, as well as which portfolio of assets, would have been the most effective in hedging against Turkish inflation. This project analyzes the following assets: Turkish stocks, Turkish government bonds, Turkish house price index, gold and bitcoin. The assets performance is then compared to the inflation in Türkyie over the timespan from January 2018 to September 2024.
 
-# Usage
+# Replication
+
+---
+
+## Usage
 
     git clone https://github.com/denis-lasser/hedging-against-turkish-inflation
     cd hedging-against-turkish-inflation
 
-# Docker
+## Docker
 
 To build the image:
 
