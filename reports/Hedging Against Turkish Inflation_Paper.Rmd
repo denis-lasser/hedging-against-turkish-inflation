@@ -35,7 +35,7 @@ Following indices were sourced from Bloomberg:
 
 - XBT BGN: Bitcoin is included in the analysis as an alternative inflation hedge, with prices analyzed in USD. Analyzing Bitcoin in USD focuses on its performance as a global inflation hedge, independent of potential distortions caused by exchange rate volatility. This approach provides insights into Bitcoin’s ability to preserve purchasing power and its relevance in the context of Turkish inflation.
 
-Furthermore, the house price index data was obtained from the Turkish Central Bank’s EVDS database. Specifically, the TP KFE TR-1 series was used, which tracks nationwide residential property prices in Türkiye. Real estate is often considered a strong inflation hedge, as property values and rental income tend to rise with inflation. This index allows an analysis of the effectiveness of the real estate sector in preserving purchasing power during inflationary periods.
+Furthermore, the house price index data was obtained from the Turkish Central Bank’s EVDS database (https://evds2.tcmb.gov.tr/index.php?/evds/portlet/KSAktmjeowo%3D/en). Specifically, the TP KFE TR-1 series was used, which tracks nationwide residential property price change in Türkiye. Real estate is often considered a strong inflation hedge, as property values and rental income tend to rise with inflation. This index allows an analysis of the effectiveness of the real estate sector in preserving purchasing power during inflationary periods.
 
 ## Analysis Techniques
 The analysis consists of two main steps. First, the effectiveness of each individual asset in providing a hedge is evaluated. Subsequently, an optimal hedging portfolio is determined.
