@@ -1,0 +1,82 @@
+---
+title: "Hedging Against Turkish Inflation"
+author: "Selin Acar, Necati Furkan Çolak, Denis Lasser"
+date: "December 2024"
+output:
+  beamer_presentation:
+    toc: true
+    number_sections: true
+fontsize: 11pt
+---
+
+# Introduction I
+
+- Ongoing economic crisis in Türkiye has been characterized by **high inflation**, the **depreciation of the Turkish Lira** (TRY), **rising borrowing costs**, and **increasing loan defaults**.
+- The underlying causes of the crisis can be attributed to **political instability**, **global economic pressures**, and the implementation of **unconventional economic policies**.
+- Since 2018, inflation has been a persistent issue, partly due to fluctuations in global oil prices and exchange rates, with **Turkey's inflation rate ranking among the highest in emerging markets** (Yilmazkuday, 2022).
+
+# Introduction II
+- The Turkish government's policy of maintaining low interest rates to stimulate growth, despite the conventional theory that raising interest rates should reduce inflation, has contributed significantly to the current economic challenges (Kantur & Özcan, 2022).
+- Interest rates have been raised significantly. The most recent rate hike was in March 2024, when the central bank increased the **interest rate** by 5 percentage points to **50%** as the year-on-year inflation reached 75% (Bloomberg, 2024).
+- Since then, the rate has remained unchanged as the central bank has been committed to fighting high inflation and stabilising the Turkish lira. As of October 2024, **year-on-year inflation stands at 48%** (Bloomberg, 2024).
+
+  
+# Methodology
+
+- Analyze asset performance using monthly data (Jan 2018–Sep 2024).
+- Two steps:
+  1. Evaluate individual asset hedging effectiveness.
+  2. Construct an optimal hedging portfolio using Markowitz optimization.
+  
+# Methodology
+
+## Data Sources
+- **TUCXEFYY Index**: Turkish core CPI (excluding food, energy, alcohol, tobacco).
+- **XU100 Index**: Turkish stock index (BIST 100).
+- **GTTRY10YR**: 10-Year Turkish Government Bond.
+- **XAU (Gold in USD)**: Global inflation hedge.
+- **XBT BGN (Bitcoin in USD)**: Alternative hedge.
+- **TP KFE TR-1**: Turkish house price index (real estate sector).
+
+# Analysis Techniques
+
+## Excess Return
+- TRY-denominated assets:
+  \[
+  \text{Excess Return} = \text{Nominal Return} - \text{Inflation Rate}
+  \]
+
+- USD-denominated assets:
+  \[
+  \text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
+  \]
+  
+# Analysis Techniques
+
+## Markowitz Optimization
+- Portfolio return:
+  \[
+  R_p = \sum_{i=1}^{n} w_i R_i
+  \]
+
+- Portfolio variance:
+  \[
+  \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+  \]
+
+- Minimize portfolio risk:
+  \[
+  \min_{w} \, \sigma_p^2 \quad \text{subject to:} \quad \sum_{i=1}^{n} w_i R_i = R_{\text{target}}, \quad \sum_{i=1}^{n} w_i = 1, \quad w_i \geq 0
+  \]
+
+# Results
+
+- Key findings on individual asset performance.
+- Optimized portfolio composition.
+
+# Conclusion
+
+- Summary of findings.
+- Best hedging assets and portfolio configuration.
+- Implications for policy and future research.
+
