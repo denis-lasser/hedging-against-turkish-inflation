@@ -6,8 +6,6 @@ This study aims to analyze which assets, as well as which portfolio of assets, w
 
 # Replication
 
----
-
 ## Usage
 
     git clone https://github.com/denis-lasser/hedging-against-turkish-inflation
@@ -24,3 +22,18 @@ To run the jupyter notebook:
     docker run -p 8888:8888 -v "$(pwd):/home/jovyan/app" hedging-inflation
 
 The terminal will provide a link, which you can click to open the jupyter notebook in your browser. Then select "guide.ipynb".
+
+## Generate Paper and Presentation
+
+First, you need to pull the texlive/texlive docker image, if you don't have it already.
+
+    docker pull texlive/texlive:latest
+
+Navigate to the /reports directory and run the following command from the command line:
+
+    docker run -v $(pwd):/workdir -it texlive/texlive bash
+
+From within the  docker container you can convert the .tex files to pdf:
+
+    pdflatex 'Hedging Against Turkish Inflation_Paper.tex'
+    pdflatex 'Hedging Against Turkish Inflation_Presentation.tex'
