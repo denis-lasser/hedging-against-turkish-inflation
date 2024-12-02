@@ -1,0 +1,214 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Hedging Against Turkish Inflation},
+  pdfauthor={Selin Acar, Necati Furkan Çolak, Denis Lasser},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Hedging Against Turkish Inflation}
+\author{Selin Acar, Necati Furkan Çolak, Denis Lasser}
+\date{December 2024}
+
+\begin{document}
+\maketitle
+
+\section{Introduction I}\label{introduction-i}
+
+\begin{itemize}
+\tightlist
+\item
+  Ongoing economic crisis in Türkiye has been characterized by
+  \textbf{high inflation}, the \textbf{depreciation of the Turkish Lira}
+  (TRY), \textbf{rising borrowing costs}, and \textbf{increasing loan
+  defaults}.
+\item
+  The underlying causes of the crisis can be attributed to
+  \textbf{political instability}, \textbf{global economic pressures},
+  and the implementation of \textbf{unconventional economic policies}.
+\item
+  Since 2018, inflation has been a persistent issue, partly due to
+  fluctuations in global oil prices and exchange rates, with
+  \textbf{Turkey's inflation rate ranking among the highest in emerging
+  markets} (Yilmazkuday, 2022).
+\end{itemize}
+
+\section{Introduction II}\label{introduction-ii}
+
+\begin{itemize}
+\tightlist
+\item
+  The Turkish government's policy of maintaining low interest rates to
+  stimulate growth, despite the conventional theory that raising
+  interest rates should reduce inflation, has contributed significantly
+  to the current economic challenges (Kantur \& Özcan, 2022).
+\item
+  Interest rates have been raised significantly. The most recent rate
+  hike was in March 2024, when the central bank increased the
+  \textbf{interest rate} by 5 percentage points to \textbf{50\%} as the
+  year-on-year inflation reached 75\% (Bloomberg, 2024).
+\item
+  Since then, the rate has remained unchanged as the central bank has
+  been committed to fighting high inflation and stabilising the Turkish
+  lira. As of October 2024, \textbf{year-on-year inflation stands at
+  48\%} (Bloomberg, 2024).
+\end{itemize}
+
+\section{Methodology}\label{methodology}
+
+\begin{itemize}
+\tightlist
+\item
+  Analyze asset performance using monthly data (Jan 2018--Sep 2024).
+\item
+  Two steps:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Evaluate individual asset hedging effectiveness.
+  \item
+    Construct an optimal hedging portfolio using Markowitz optimization.
+  \end{enumerate}
+\end{itemize}
+
+\section{Methodology}\label{methodology-1}
+
+\subsection{Data Sources}\label{data-sources}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{TUCXEFYY Index}: Turkish core CPI (excluding food, energy,
+  alcohol, tobacco).
+\item
+  \textbf{XU100 Index}: Turkish stock index (BIST 100).
+\item
+  \textbf{GTTRY10YR}: 10-Year Turkish Government Bond.
+\item
+  \textbf{XAU (Gold in USD)}: Global inflation hedge.
+\item
+  \textbf{XBT BGN (Bitcoin in USD)}: Alternative hedge.
+\item
+  \textbf{TP KFE TR-1}: Turkish house price index (real estate sector).
+\end{itemize}
+
+\section{Analysis Techniques}\label{analysis-techniques}
+
+\subsection{Excess Return}\label{excess-return}
+
+\begin{itemize}
+\item
+  TRY-denominated assets: \[
+  \text{Excess Return} = \text{Nominal Return} - \text{Inflation Rate}
+  \]
+\item
+  USD-denominated assets: \[
+  \text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
+  \]
+\end{itemize}
+
+\section{Analysis Techniques}\label{analysis-techniques-1}
+
+\subsection{Markowitz Optimization}\label{markowitz-optimization}
+
+\begin{itemize}
+\item
+  Portfolio return: \[
+  R_p = \sum_{i=1}^{n} w_i R_i
+  \]
+\item
+  Portfolio variance: \[
+  \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+  \]
+\item
+  Minimize portfolio risk: \[
+  \min_{w} \, \sigma_p^2 \quad \text{subject to:} \quad \sum_{i=1}^{n} w_i R_i = R_{\text{target}}, \quad \sum_{i=1}^{n} w_i = 1, \quad w_i \geq 0
+  \]
+\end{itemize}
+
+\section{Results}\label{results}
+
+\begin{itemize}
+\tightlist
+\item
+  Key findings on individual asset performance.
+\item
+  Optimized portfolio composition.
+\end{itemize}
+
+\section{Conclusion}\label{conclusion}
+
+\begin{itemize}
+\tightlist
+\item
+  Summary of findings.
+\item
+  Best hedging assets and portfolio configuration.
+\item
+  Implications for policy and future research.
+\end{itemize}
+
+\end{document}
