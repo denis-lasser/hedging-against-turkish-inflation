@@ -37,3 +37,13 @@ From within the  docker container you can convert the .tex files to pdf:
 
     pdflatex 'Hedging Against Turkish Inflation_Paper.tex'
     pdflatex 'Hedging Against Turkish Inflation_Presentation.tex'
+
+## Data
+
+To understand the formatting of the data used in this project, please refer to the folder:
+
+   ```.../data/sample data```
+
+This folder contains fictional data that serves solely as an example to illustrate the required data structure and formatting for the project.
+
+The actual data used in this analysis comes from Bloomberg and is subject to licensing restrictions. As such, we cannot share the original data on this repository. The provided fictional data is for demonstration purposes only.
