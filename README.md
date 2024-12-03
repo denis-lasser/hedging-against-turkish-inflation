@@ -8,7 +8,12 @@ This study aims to analyze which assets, as well as which portfolio of assets, w
 
 ## Usage
 
+Download
+
     git clone https://github.com/denis-lasser/hedging-against-turkish-inflation
+
+Navigate into the project:
+
     cd hedging-against-turkish-inflation
 
 ## Docker
