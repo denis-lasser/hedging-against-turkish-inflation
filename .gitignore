@@ -4,6 +4,12 @@ data/processed/
 data/raw/
 !data/raw/.gitkeep
 
+# Latex stuff
+*.log
+*.aug
+*.toc
+reports/*.pdf
+
 # Mac OS-specific storage files
 .DS_Store
 
