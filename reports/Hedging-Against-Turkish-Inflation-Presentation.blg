@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Hedging-Against-Turkish-Inflation-Presentation.aux
+The style file: plainnat.bst
+Database file #1: references.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            613 strings with 5358 characters,
+and the built_in function-call counts, 1219 in all, are:
+= -- 112
+> -- 41
+< -- 3
++ -- 15
+- -- 12
+* -- 85
+:= -- 191
+add.period$ -- 11
+call.type$ -- 3
+change.case$ -- 13
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 55
+empty$ -- 117
+format.name$ -- 17
+if$ -- 256
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 25
+num.names$ -- 12
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 10
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 63
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 0
+while$ -- 11
+width$ -- 0
+write$ -- 49

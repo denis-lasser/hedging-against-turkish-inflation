@@ -1,214 +1,186 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-%
-\documentclass[
-  11pt,
-]{article}
-\usepackage{amsmath,amssymb}
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{xcolor}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-\hypersetup{
-  pdftitle={Hedging Against Turkish Inflation},
-  pdfauthor={Selin Acar, Necati Furkan Çolak, Denis Lasser},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
 
 \title{Hedging Against Turkish Inflation}
 \author{Selin Acar, Necati Furkan Çolak, Denis Lasser}
 \date{December 2024}
 
+% Bibliography setup
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
+\setbeamertemplate{bibliography item}[text]
+
 \begin{document}
-\maketitle
 
-\section{Introduction I}\label{introduction-i}
+% Title Page
+\frame{\titlepage}
 
+% Table of Contents
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% Introduction I
+\section{Introduction}
+\begin{frame}{Introduction I}
 \begin{itemize}
 \tightlist
-\item
-  Ongoing economic crisis in Türkiye has been characterized by
-  \textbf{high inflation}, the \textbf{depreciation of the Turkish Lira}
-  (TRY), \textbf{rising borrowing costs}, and \textbf{increasing loan
-  defaults}.
-\item
-  The underlying causes of the crisis can be attributed to
-  \textbf{political instability}, \textbf{global economic pressures},
-  and the implementation of \textbf{unconventional economic policies}.
-\item
-  Since 2018, inflation has been a persistent issue, partly due to
-  fluctuations in global oil prices and exchange rates, with
-  \textbf{Turkey's inflation rate ranking among the highest in emerging
-  markets} (Yilmazkuday, 2022).
+\item Ongoing economic crisis in Türkiye has been characterized by
+\textbf{high inflation}, the \textbf{depreciation of the Turkish Lira}
+(TRY), \textbf{rising borrowing costs}, and \textbf{increasing loan
+defaults}.
+\item The underlying causes of the crisis can be attributed to
+\textbf{political instability}, \textbf{global economic pressures},
+and the implementation of \textbf{unconventional economic policies}.
+\item Since 2018, inflation has been a persistent issue, partly due to
+fluctuations in global oil prices and exchange rates, with
+\textbf{Turkey's inflation rate ranking among the highest in emerging
+markets} \citep{yilmazkuday_2022}.
 \end{itemize}
+\end{frame}
 
-\section{Introduction II}\label{introduction-ii}
-
+% Introduction II
+\begin{frame}{Introduction II}
 \begin{itemize}
 \tightlist
-\item
-  The Turkish government's policy of maintaining low interest rates to
-  stimulate growth, despite the conventional theory that raising
-  interest rates should reduce inflation, has contributed significantly
-  to the current economic challenges (Kantur \& Özcan, 2022).
-\item
-  Interest rates have been raised significantly. The most recent rate
-  hike was in March 2024, when the central bank increased the
-  \textbf{interest rate} by 5 percentage points to \textbf{50\%} as the
-  year-on-year inflation reached 75\% (Bloomberg, 2024).
-\item
-  Since then, the rate has remained unchanged as the central bank has
-  been committed to fighting high inflation and stabilising the Turkish
-  lira. As of October 2024, \textbf{year-on-year inflation stands at
-  48\%} (Bloomberg, 2024).
+\item The Turkish government's policy of maintaining low interest rates to
+stimulate growth, despite the conventional theory that raising
+interest rates should reduce inflation, has contributed significantly
+to the current economic challenges \citep{kantur_ozcan_2021}.
+\item Interest rates have been raised significantly. The most recent rate
+hike was in March 2024, when the central bank increased the
+\textbf{interest rate} by 5 percentage points to \textbf{50\%} as the
+year-on-year inflation reached 75\% \citep{bloomberg_2024}.
+\item Since then, the rate has remained unchanged as the central bank has
+been committed to fighting high inflation and stabilising the Turkish
+lira. As of October 2024, \textbf{year-on-year inflation stands at
+48\%} \citep{bloomberg_2024}.
 \end{itemize}
+\end{frame}
 
-\section{Methodology}\label{methodology}
-
+% Methodology I
+\section{Methodology}
+\subsection{Analyze Asset Performance}
+\begin{frame}{Methodology I: Analyze Asset Performance}
 \begin{itemize}
 \tightlist
-\item
-  Analyze asset performance using monthly data (Jan 2018--Sep 2024).
-\item
-  Two steps:
-
-  \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-    Evaluate individual asset hedging effectiveness.
-  \item
-    Construct an optimal hedging portfolio using Markowitz optimization.
-  \end{enumerate}
+\item Analyze asset performance using monthly data (Jan 2018--Sep 2024).
+\item Two steps:
+\begin{enumerate}
+\item Evaluate individual asset hedging effectiveness.
+\item Construct an optimal hedging portfolio using Markowitz optimization.
+\end{enumerate}
 \end{itemize}
+\end{frame}
 
-\section{Methodology}\label{methodology-1}
-
-\subsection{Data Sources}\label{data-sources}
-
+% Methodology II
+\subsection{Data Sources}
+\begin{frame}{Methodology II: Data Sources}
 \begin{itemize}
 \tightlist
-\item
-  \textbf{TUCXEFYY Index}: Turkish core CPI (excluding food, energy,
-  alcohol, tobacco).
-\item
-  \textbf{XU100 Index}: Turkish stock index (BIST 100).
-\item
-  \textbf{GTTRY10YR}: 10-Year Turkish Government Bond.
-\item
-  \textbf{XAU (Gold in USD)}: Global inflation hedge.
-\item
-  \textbf{XBT BGN (Bitcoin in USD)}: Alternative hedge.
-\item
-  \textbf{TP KFE TR-1}: Turkish house price index (real estate sector).
+\item \textbf{TUCXEFYY Index}: Turkish core CPI (excluding food, energy,
+alcohol, tobacco).
+\item \textbf{XU100 Index}: Turkish stock index (BIST 100).
+\item \textbf{GTTRY10YR}: 10-Year Turkish Government Bond.
+\item \textbf{XAU (Gold in USD)}: Global inflation hedge.
+\item \textbf{XBT BGN (Bitcoin in USD)}: Alternative hedge.
+\item \textbf{TP KFE TR-1}: Turkish house price index (real estate sector).
 \end{itemize}
+\end{frame}
 
-\section{Analysis Techniques}\label{analysis-techniques}
+% Methodology III
+\subsection{Excess Return}
+\begin{frame}{Methodology III: Excess Return}
+\[
+\text{Excess Return} = \text{Nominal Return} - \text{Inflation Rate}
+\]
 
-\subsection{Excess Return}\label{excess-return}
+\[
+\text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
+\]
+\end{frame}
 
+% Methodology IV
+\subsection{Markowitz Optimization}
+\begin{frame}{Methodology IV: Markowitz Optimization}
 \begin{itemize}
-\item
-  TRY-denominated assets: \[
-  \text{Excess Return} = \text{Nominal Return} - \text{Inflation Rate}
-  \]
-\item
-  USD-denominated assets: \[
-  \text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
-  \]
+\item Portfolio return: \[
+R_p = \sum_{i=1}^{n} w_i R_i
+\]
+\item Portfolio variance: \[
+\sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+\]
+\item Minimize portfolio risk: \[
+\min_{w} \, \sigma_p^2 \quad \text{subject to:} \quad \sum_{i=1}^{n} w_i R_i = R_{\text{target}}, \quad \sum_{i=1}^{n} w_i = 1, \quad w_i \geq 0
+\]
 \end{itemize}
+\end{frame}
 
-\section{Analysis Techniques}\label{analysis-techniques-1}
-
-\subsection{Markowitz Optimization}\label{markowitz-optimization}
-
-\begin{itemize}
-\item
-  Portfolio return: \[
-  R_p = \sum_{i=1}^{n} w_i R_i
-  \]
-\item
-  Portfolio variance: \[
-  \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
-  \]
-\item
-  Minimize portfolio risk: \[
-  \min_{w} \, \sigma_p^2 \quad \text{subject to:} \quad \sum_{i=1}^{n} w_i R_i = R_{\text{target}}, \quad \sum_{i=1}^{n} w_i = 1, \quad w_i \geq 0
-  \]
-\end{itemize}
-
-\section{Results}\label{results}
-
+% Results: Individual Assets
+\section{Results}
+\begin{frame}{Results: Turkish Stocks}
 \begin{itemize}
 \tightlist
-\item
-  Key findings on individual asset performance.
-\item
-  Optimized portfolio composition.
+\item Discuss performance of Turkish stocks as an inflation hedge.
 \end{itemize}
+\end{frame}
 
-\section{Conclusion}\label{conclusion}
-
+\begin{frame}{Results: Turkish Government Bond}
 \begin{itemize}
 \tightlist
-\item
-  Summary of findings.
-\item
-  Best hedging assets and portfolio configuration.
-\item
-  Implications for policy and future research.
+\item Discuss performance of Turkish government bonds as an inflation hedge.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Gold}
+\begin{itemize}
+\tightlist
+\item Discuss performance of gold as an inflation hedge.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Bitcoin}
+\begin{itemize}
+\tightlist
+\item Discuss performance of Bitcoin as an inflation hedge.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Turkish Real Estate}
+\begin{itemize}
+\tightlist
+\item Discuss performance of Turkish real estate as an inflation hedge.
+\end{itemize}
+\end{frame}
+
+% Results: Markowitz Optimization
+\begin{frame}{Results: Markowitz Optimization}
+\begin{itemize}
+\tightlist
+\item Discuss portfolio composition and its performance.
+\end{itemize}
+\end{frame}
+
+% Conclusion
+\section{Conclusion}
+\begin{frame}{Conclusion}
+\begin{itemize}
+\tightlist
+\item Summary of findings.
+\item Best hedging assets and portfolio configuration.
+\item Implications for policy and future research.
+\end{itemize}
+\end{frame}
+
+% Resources
+\section{References}
+\begin{frame}[allowframebreaks]{References}
+\bibliography{references} % Ensure references.bib is in the same directory or update the path.
+\end{frame}
 
 \end{document}
+
+
