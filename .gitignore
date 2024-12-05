@@ -1,8 +1,8 @@
 # Data
-data/processed/
-!data/processed/.gitkeep
-data/raw/
-!data/raw/.gitkeep
+data/processed/*.csv
+data/processed/*.xlsx
+data/raw/*.csv
+data/raw/*.xlsx
 
 # Latex stuff
 *.log
