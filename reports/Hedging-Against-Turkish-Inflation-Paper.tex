@@ -200,43 +200,13 @@ The analysis consists of two main steps. First, the effectiveness of
 each individual asset in providing a hedge is evaluated. Subsequently,
 an optimal hedging portfolio is determined.
 
-The first step is to calculate the \textbf{excess return} for each asset
-relative to the Turkish inflation rate.
-
-This calculation differs depending on whether the asset is denominated
-in TRY or USD:
-
-\begin{itemize}
-\tightlist
-\item
-  Asset denominated in TRY:
-\end{itemize}
+The first step is to calculate the \textbf{real return} for each asset relative to the Turkish inflation rate. This ensures a consistent measure of an asset's effectiveness in preserving purchasing power in Türkiye's inflationary environment.
 
 \[
-\text{Excess Return}= \text{Nominal Return} - \text{Inflation Rate}
+\text{Real Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
 \]
 
-Excess return is calculated as the asset's return minus the Turkish
-inflation rate over the same period. This straightforward calculation
-reflects the direct impact of inflation on TRY-denominated assets.
-
-\begin{itemize}
-\tightlist
-\item
-  Asset denominated in USD:
-\end{itemize}
-
-\[
-\text{Excess Return} = \frac{1 + \text{Nominal Return}}{1 + \text{Inflation Rate}} - 1
-\]
-
-In this case, Turkish inflation is used to adjust the nominal return.
-Real returns for USD-denominated assets, such as gold and Bitcoin, are
-calculated using Turkish inflation rates to assess their effectiveness
-in preserving purchasing power in Türkiye. While nominal returns in USD
-account for global factors, real returns adjusted for Turkish inflation
-provide a clearer measure of an asset's ability to hedge against the
-specific inflationary pressures experienced in Türkiye.
+This formula adjusts the nominal return of each asset to account for the impact of Turkish inflation. By expressing returns in real terms, it provides a clearer picture of an asset's ability to act as an inflation hedge, irrespective of whether it is denominated in TRY or USD.
 
 This first step evaluates each asset's ability to preserve purchasing
 power. Assets with consistently positive excess returns are considered
