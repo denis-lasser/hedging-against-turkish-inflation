@@ -1,6 +1,12 @@
 # Data
+!data/processed/*.gitkeep
+data/processed/
 data/processed/*.csv
 data/processed/*.xlsx
+data/processed/*.db
+
+!data/raw/*.gitkeep
+data/raw/
 data/raw/*.csv
 data/raw/*.xlsx
 
