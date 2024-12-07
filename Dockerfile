@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM quay.io/jupyter/minimal-notebook:python-3.12
+FROM quay.io/jupyter/scipy-notebook:python-3.12
 
 # create and set working directory
 WORKDIR /home/jovyan/app
