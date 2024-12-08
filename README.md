@@ -30,18 +30,33 @@ The terminal will provide a link, which you can click to open the jupyter notebo
 
 ## Generate Paper and Presentation
 
-First, you need to pull the texlive/texlive docker image, if you don't have it already.
+If you wish to create the paper or presentation in a presentation ready format, here are some instructions to convert the .tex files to .pdf.
 
-    docker pull texlive/texlive:latest
+The recommended way is to use the `texlive/texlive` distribution with docker. For this purpose, the medium distribution is enough. To pull the image using the docker CLI (command line interface):
 
-Navigate to the /reports directory and run the following command from the command line:
+    docker pull texlive/texlive:lastest-medium
 
-    docker run -v $(pwd):/workdir -it texlive/texlive bash
+Alternatively, you can also use docker's graphical interface. To run the docker container, run this command from the `reports` directory (if you run it from a different directory, you will have to navigate to the correct path inside the container):
 
-From within the  docker container you can convert the .tex files to pdf:
+    docker run -v $(pwd):/workdir -it texlive/texlive:latest-medium bash
 
-    pdflatex 'Hedging Against Turkish Inflation_Paper.tex'
-    pdflatex 'Hedging Against Turkish Inflation_Presentation.tex'
+From inside the container run the following commands after each other. Note, that it's best to run the last command twice, as is shown.
+
+**For the paper:**
+
+    pdflatex Hedging-Against-Turkish-Inflation-Paper.tex
+    bibtex Hedging-Against-Turkish-Inflation-Paper.aux
+    pdflatex Hedging-Against-Turkish-Inflation-Paper.tex
+    pdflatex Hedging-Against-Turkish-Inflation-Paper.tex
+
+**For the presentation:**
+
+    pdflatex Hedging-Against-Turkish-Inflation-Presentation.tex
+    bibtex Hedging-Against-Turkish-Inflation-Presentation.aux
+    pdflatex Hedging-Against-Turkish-Inflation-Presentation.tex
+    pdflatex Hedging-Against-Turkish-Inflation-Presentation.tex
+
+You can now find the .pdf of both the paper and the presentation in the `reports` directory.
 
 ## Data
 
