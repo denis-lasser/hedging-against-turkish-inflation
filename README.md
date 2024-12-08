@@ -34,7 +34,7 @@ If you wish to create the paper or presentation in a presentation ready format, 
 
 The recommended way is to use the `texlive/texlive` distribution with docker. For this purpose, the medium distribution is enough. To pull the image using the docker CLI (command line interface):
 
-    docker pull texlive/texlive:lastest-medium
+    docker pull texlive/texlive:latest-medium
 
 Alternatively, you can also use docker's graphical interface. To run the docker container, run this command from the `reports` directory (if you run it from a different directory, you will have to navigate to the correct path inside the container):
 
