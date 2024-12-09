@@ -182,6 +182,8 @@ Following indices were sourced from Bloomberg:
   volatility. This approach provides insights into Bitcoin's ability to
   preserve purchasing power and its relevance in the context of Turkish
   inflation.
+\item 
+  \textbf{USGG10YR Index:} The 10-year US Government bond yield was used as the risk-free rate in the Markowitz Optimization. This rate serves as a benchmark for risk-free returns and providess a baseline to evaluate the performance of other assets and calculate excess returns in the portfolio construction.
 \end{itemize}
 
 Furthermore, the house price index data was obtained from the Turkish
@@ -367,27 +369,51 @@ Comparing the assets, one can conclude for the period from January 2018 to Septe
 
 \subsection{Markowitz Portfolio Optimization}
 
-The Markowitz portfolio optimization uses the real returns of each asset to balance risk and return. Using the aforementioned formula, the optimal portfolio allocation is:
+The Markowitz portfolio optimization model uses real returns to accurately measure the trade-off between risk and return by accounting for inflation's impact on purchasing power. Adjusting the risk-free rate to Turkish inflation ensures consistency across all asset returns and allows the optimization to reflect the true economic environment faced by investors.
+
+To ensure the robustness of the results, the Markowitz portfolio optimization is presented using both the median and mean real risk-free rate adjusted for Turkish inflation. This approach allows the assessment of portfolio outcomes under different assumptions about the risk-free rate in a highly volatile inflation environment. While US government bonds provide positive nominal yields, the much higher inflation in Turkey results in negative real returns when adjusted to the local inflation rate. Despite this, using the real return is appropriate as it ensures consistency with the inflation-adjusted returns of other assets, reflecting the actual economic conditions faced by investors in terms of purchasing power. 
+
+Portfolio allocation using the mean real return of the US 10y Gov Bond (-20.87\%):
 
 \begin{itemize}
-  \item \textbf{Turkish Stocks:} 12.71\%
-  \item \textbf{Turkish Government Bond:} 0.00\%
-  \item \textbf{Gold:} 0.00\%
-  \item \textbf{Bitcoin:} 0.92\%
-  \item \textbf{Turkish Real Estate:} 86.37\%
+  \item \textbf{Turkish Stocks:} 3.48\%
+  \item \textbf{Turkish Government Bond:} 57.76\%
+  \item \textbf{Gold:} 8.40\%
+  \item \textbf{Bitcoin:} 0.15\%
+  \item \textbf{Turkish Real Estate:} 30.21\%
 \end{itemize}
 
 Resulting in:
 \begin{itemize}
-  \item \textbf{Expected Portfolio Return:} 35.12\%
-  \item \textbf{Expected Portfolio Volatility:} 60.56\%
+  \item \textbf{Expected Portfolio Return:} 1.34\%
+  \item \textbf{Expected Portfolio Volatility:} 19.77\%
 \end{itemize}
 
-This portfolio allocation demonstrates the dominance of Turkish Real Estate (HPI) as the primary asset in hedging against inflation, given its historically high real returns and relatively lower risk compared to other assets. The minimal allocations to Turkish Stocks (12.71\%) and Bitcoin (0.92\%) suggest that while these assets contribute to potential returns, their volatility limits their inclusion. Despite the high allocation to real estate, diversification through small allocations to stocks and Bitcoin reduces some risk. The absence of Gold and Turkish Government Bonds indicates that these assets did not provide sufficient returns or diversification benefits over the period analyzed.
+Portfolio allocation using the median real return of the US 10y Gov Bond (-13.71\%):
 
-The expected portfolio return of 35.12\% reflects an aggressive approach that prioritizes high growth potential despite the associated risk, as indicated by the portfolio’s high volatility (60.56\%). This allocation may appeal to investors with a high risk tolerance who wish to preserve and grow their purchasing power in a high inflation environment. In inflationary environments, preserving purchasing power often requires accepting higher volatility. The high allocation to real estate reflects this, as it may historically have outperformed inflation, despite its price volatility.
+\begin{itemize}
+  \item \textbf{Turkish Stocks:} 7.71\%
+  \item \textbf{Turkish Government Bond:} 0.00\%
+  \item \textbf{Gold:} 24.67\%
+  \item \textbf{Bitcoin:} 0.47\%
+  \item \textbf{Turkish Real Estate:} 67.15\%
+\end{itemize}
 
-It is also worth noting that the Markowitz optimization is purely mathematical and does not take into account behavioral factors or practical constraints such as liquidity needs and aversion to extreme volatility. 
+Resulting in:
+\begin{itemize}
+  \item \textbf{Expected Portfolio Return:} 22.05\%
+  \item \textbf{Expected Portfolio Volatility:} 41.25\%
+\end{itemize}
+
+The results highlight the sensitivity of portfolio allocation and expected outcomes to the chosen risk-free rate. It also emphasizes the importance of robust assumptions in the Markowitz optimization framework.
+
+Using the average real return of the 10-year US Treasury (-20.87\%), the portfolio is heavily allocated to Turkish government bonds (57.76\%) and Turkish real estate (30.21\%), with minimal allocations to gold (8.40\%) and bitcoin (0.15\%). This allocation reflects a strategy to minimize risk while achieving a modest expected portfolio return (1.34\%) and relatively low volatility (19.77\%).
+
+In contrast, using the median real return (-13.71\%) shifts the allocation dramatically, with a complete exclusion of Turkish government bonds (0.00\%) and a heavier weighting in gold (24.67\%) and Turkish real estate (67.15\%). This allocation results in a much higher expected return (22.05\%), but at the cost of much higher volatility (41.25\%).
+
+The differences in portfolio allocations and outcomes illustrate that the choice between the mean and median real risk-free rate can profoundly affect optimization results, particularly in environments with volatile inflation and significant outliers. The mean risk-free rate, which is more sensitive to extreme values, drives a conservative allocation with lower returns and risk. The median risk-free rate, which is robust to outliers, leads to a more aggressive allocation that prioritizes higher expected returns at the expense of greater volatility. These results show the importance of conducting robustness checks, especially when inflation or other economic conditions vary significantly, as assumptions about the risk-free rate directly impact the portfolio's risk-return profile.
+
+It is also worth noting that the Markowitz optimization is purely mathematical and does not take into account behavioral factors or practical constraints such as aversion to extreme volatility or liquidity needs. 
 
 \section{Conclusion and Future Research}\label{conclusion}
 
