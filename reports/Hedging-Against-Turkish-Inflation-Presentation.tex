@@ -63,8 +63,8 @@ lira. As of October 2024, \textbf{year-on-year inflation stands at
 
 % Methodology I
 \section{Methodology}
-\subsection{Analyze Asset Performance}
-\begin{frame}{Methodology I: Analyze Asset Performance}
+\subsection{Asset Performance Analysis}
+\begin{frame}{Methodology: Asset Performance Analysis}
 \begin{itemize}
 \item Analyze asset performance using monthly data (Jan 2018--Sep 2024).
 \item Two steps:
@@ -77,7 +77,7 @@ lira. As of October 2024, \textbf{year-on-year inflation stands at
 
 % Methodology II
 \subsection{Data Sources}
-\begin{frame}{Methodology II: Data Sources}
+\begin{frame}{Methodology: Data Sources}
 \begin{itemize}
 \item From Bloomberg:
 \begin{itemize}
@@ -87,6 +87,7 @@ alcohol, tobacco).
 \item \textbf{GTTRY10YR}: 10-Year Turkish Government Bond.
 \item \textbf{XAU}: Global prices in USD. 
 \item \textbf{XBT BGN}: Bitcoin prices in USD.
+\item \textbf{USGG10YR Index}: 10-year US Government Bond Yield as the risk free rate.
 \end{itemize}
 \item From Turkish Central Bank:
 \begin{itemize}
@@ -96,8 +97,8 @@ alcohol, tobacco).
 \end{frame}
 
 % Methodology III
-\subsection{Excess Return}
-\begin{frame}{Methodology III: Excess Return}
+\subsection{Real Return}
+\begin{frame}{Methodology: Real Return}
 
 \begin{itemize}
 \item The first step is to calculate the real return for each asset relative to the Turkish inflation rate. 
@@ -111,7 +112,7 @@ alcohol, tobacco).
 
 % Methodology IV
 \subsection{Markowitz Optimization}
-\begin{frame}{Methodology IV: Markowitz Optimization}
+\begin{frame}{Methodology: Markowitz Optimization I}
 \begin{itemize}
 \item Building on the individual asset analysis: Markowitz portfolio optimization to construct an optimal portfolio that maximizes the hedging effectiveness against Turkish inflation.
 \item Portfolio return: \[
@@ -125,6 +126,17 @@ R_p = \sum_{i=1}^{n} w_i R_i
 \]
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Methodology: Markowitz Optimization II}
+\begin{itemize}
+    \item Adjusting the risk-free rate to Turkish inflation ensures consistency across all asset returns and allows the optimization to reflect the true economic environment faced by investors.
+    \item To ensure robustness of the results, the Markowitz portfolio optimization is presented using both the median and mean real risk-free rate adjusted for Turkish inflation.
+    \item This allows the assessment of portfolio outcomes under different assumptions about the risk-free rate in a highly volatile inflation environment.
+    \item While US government bonds provide positive nominal yields, the much higher inflation in Turkey results in negative real returns when adjusted to the local inflation rate.
+    \item Despite this, using the real return is appropriate as it ensures consistency with the inflation-adjusted returns of other assets, reflecting the actual economic conditions faced by investors in terms of purchasing power. 
+\end{itemize}
+\end{frame}
+
 
 % Results: Individual Assets
 \section{Results}
@@ -174,49 +186,66 @@ R_p = \sum_{i=1}^{n} w_i R_i
 \end{frame}
 
 % Results: Markowitz Optimization
-\begin{frame}{Results: Markowitz Optimization}
+\begin{frame}{Results: Markowitz Optimization (mean risk-free)}
 \begin{itemize}
-    \item Using the aforementioned formula, the optimal portfolio allocation is:
+    \item Portfolio allocation using the mean real return of the US 10y Gov Bond (-20.87\%):
     \begin{itemize}
-        \item \textbf{Turkish Stocks:} 12.71\%
-        \item \textbf{Turkish Government Bond:} 0.00\%
-        \item \textbf{Gold:} 0.00\%
-        \item \textbf{Bitcoin:} 0.92\%
-        \item \textbf{Turkish Real Estate:} 86.37\%
+        \item \textbf{Turkish Stocks:} 3.48\%
+        \item \textbf{Turkish Government Bond:} 57.76\%
+        \item \textbf{Gold:} 8.40\%
+        \item \textbf{Bitcoin:} 0.15\%
+        \item \textbf{Turkish Real Estate:} 30.21\%
     \end{itemize}
     \item Resulting in:
     \begin{itemize}
-        \item \textbf{Expected Portfolio Return:} 35.12\%
-        \item \textbf{Expected Portfolio Volatility:} 60.56\%
+        \item \textbf{Expected Portfolio Return:} 1.34\%
+        \item \textbf{Expected Portfolio Volatility:} 19.77\%
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Markowitz Optimization (median risk-free)}
+\begin{itemize}
+    \item Portfolio allocation using the median real return of the US 10y Gov Bond (-13.71\%):
+    \begin{itemize}
+        \item \textbf{Turkish Stocks:} 7.71\%
+        \item \textbf{Turkish Government Bond:} 0.00\%
+        \item \textbf{Gold:} 24.67\%
+        \item \textbf{Bitcoin:} 0.47\%
+        \item \textbf{Turkish Real Estate:} 67.15\%
+    \end{itemize}
+    \item Resulting in:
+    \begin{itemize}
+        \item \textbf{Expected Portfolio Return:} 22.05\%
+        \item \textbf{Expected Portfolio Volatility:} 41.25\%
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 % Results: Markowitz Optimization
-\begin{frame}{Results: Markowitz Optimization Interpretation I}
+\begin{frame}{Results: Markowitz Optimization Interpretation}
 \begin{itemize}
-\item Dominance of Turkish Real Estate (HPI) as the primary asset in hedging against inflation, given its historically high real returns and relatively lower risk compared to other assets.
-\item Minimal allocations to Turkish Stocks (12.71\%) and Bitcoin (0.92\%) suggest that while these assets contribute to potential returns, their volatility limits their inclusion, but acts as diversification to reduce some risk.
-\item Absence of Gold and Turkish Government Bonds indicates that these assets did not provide sufficient returns or diversification benefits over the period analyzed.
-\end{itemize}
-\end{frame}
-
-% Results: Markowitz Optimization
-\begin{frame}{Results: Markowitz Optimization Interpretation II}
-\begin{itemize}
-\item Expected portfolio return of 35.12\% reflects an aggressive approach that prioritizes high growth potential despite the associated risk, as indicated by the portfolio’s high volatility (60.56\%).
-\item In inflationary environments, preserving purchasing power often requires accepting higher volatility.
-\item Markowitz optimization is purely mathematical and does not take into account behavioral factors or practical constraints such as liquidity needs and aversion to extreme volatility. 
+\item Portfolio allocation is highly sensitive to the choice of risk-free rate, highlighting the need for robust assumptions.
+\item Using the mean real return (-20.87\%), the portfolio heavily allocates to Turkish government bonds (57.76\%) and real estate (30.21\%), with minimal allocation to gold (8.40\%) and bitcoin (0.15\%), targeting low risk (19.77\% volatility) and modest return (1.34\%).
+\item Using the median real return (-13.71\%), allocations shift entirely to gold (24.67\%) and real estate (67.15\%), achieving a higher return (22.05\%) but with greater risk (41.25\% volatility).
+\item Mean risk-free rate, sensitive to extreme values, results in conservative allocations with lower risk and returns.
+\item Median risk-free rate, robust to outliers, drives aggressive allocations favoring higher returns at higher risk.
+\item Markowitz optimization is mathematical, excluding behavioral factors and practical constraints like liquidity needs or volatility aversion.
 \end{itemize}
 \end{frame}
 
 % Conclusion
-\section{Conclusion}
+\section{Conclusion and Future Research}
 \begin{frame}{Conclusion}
 \begin{itemize}
-\item This study demonstrates that Turkish real estate is the most effective hedge against inflation over the period analyzed.
-\item It also dominates the Markowitz portfolio due to its high real returns and relatively lower risk compared to other assets.
-\item The resulting portfolio offers high expected returns but comes with significant volatility.
+\item This study highlights the sensitivity of portfolio allocation to the choice of the real risk-free rate in inflation-adjusted Markowitz optimization.
+\item Turkish real estate emerges as a key component in the portfolio, driven by its relatively high real returns and alignment with inflationary trends.
+\item The resulting portfolio achieves high expected returns but is accompanied by significant volatility, particularly when the median real risk-free rate is used.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Future Research}
+\begin{itemize}
 \item Future research could look into areas such as: 
 \begin{itemize}
   \item Expand the asset universe to include more complex financial products, such as derivatives (e.g., inflation-linked swaps or options), exchange-traded funds (ETFs), or foreign-denominated assets. These products could provide more effective and flexible hedging mechanisms against inflation.

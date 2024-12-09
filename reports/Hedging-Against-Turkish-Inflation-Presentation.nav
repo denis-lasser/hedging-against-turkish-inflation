@@ -13,55 +13,59 @@
 \headcommand {\beamer@subsectionpages {3}{4}}
 \headcommand {\sectionentry {2}{Methodology}{5}{Methodology}{0}}
 \headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{Analyze Asset Performance}}
-\headcommand {\slideentry {2}{1}{1}{5/5}{Analyze Asset Performance}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{Asset Performance Analysis}}
+\headcommand {\slideentry {2}{1}{1}{5/5}{Asset Performance Analysis}{0}}
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\beamer@subsectionentry {0}{2}{2}{6}{Data Sources}}
 \headcommand {\slideentry {2}{2}{1}{6/6}{Data Sources}{0}}
 \headcommand {\beamer@framepages {6}{6}}
 \headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{7}{Excess Return}}
-\headcommand {\slideentry {2}{3}{1}{7/7}{Excess Return}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{7}{Real Return}}
+\headcommand {\slideentry {2}{3}{1}{7/7}{Real Return}{0}}
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\beamer@subsectionpages {7}{7}}
 \headcommand {\beamer@subsectionentry {0}{2}{4}{8}{Markowitz Optimization}}
 \headcommand {\slideentry {2}{4}{1}{8/8}{Markowitz Optimization}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@sectionpages {5}{8}}
-\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\sectionentry {3}{Results}{9}{Results}{0}}
-\headcommand {\slideentry {3}{0}{1}{9/9}{}{0}}
+\headcommand {\slideentry {2}{4}{2}{9/9}{Markowitz Optimization}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {3}{0}{2}{10/10}{}{0}}
+\headcommand {\beamer@sectionpages {5}{9}}
+\headcommand {\beamer@subsectionpages {8}{9}}
+\headcommand {\sectionentry {3}{Results}{10}{Results}{0}}
+\headcommand {\slideentry {3}{0}{1}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {3}{0}{3}{11/11}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {3}{0}{4}{12/12}{}{0}}
+\headcommand {\slideentry {3}{0}{3}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {3}{0}{5}{13/13}{}{0}}
+\headcommand {\slideentry {3}{0}{4}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {3}{0}{6}{14/14}{}{0}}
+\headcommand {\slideentry {3}{0}{5}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {3}{0}{7}{15/15}{}{0}}
+\headcommand {\slideentry {3}{0}{6}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {3}{0}{8}{16/16}{}{0}}
+\headcommand {\slideentry {3}{0}{7}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@sectionpages {9}{16}}
-\headcommand {\beamer@subsectionpages {9}{16}}
-\headcommand {\sectionentry {4}{Conclusion}{17}{Conclusion}{0}}
-\headcommand {\slideentry {4}{0}{1}{17/17}{}{0}}
+\headcommand {\slideentry {3}{0}{8}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\sectionentry {5}{References}{18}{References}{0}}
-\headcommand {\beamer@sectionpages {18}{17}}
-\headcommand {\beamer@subsectionpages {18}{17}}
-\headcommand {\sectionentry {6}{\translate {References}}{18}{\translate {References}}{0}}
-\headcommand {\slideentry {6}{0}{0}{18/18}{}{0}}
+\headcommand {\beamer@sectionpages {10}{17}}
+\headcommand {\beamer@subsectionpages {10}{17}}
+\headcommand {\sectionentry {4}{Conclusion and Future Research}{18}{Conclusion and Future Research}{0}}
+\headcommand {\slideentry {4}{0}{1}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@partpages {1}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@documentpages {18}}
-\headcommand {\gdef \inserttotalframenumber {18}}
+\headcommand {\slideentry {4}{0}{2}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@sectionpages {18}{19}}
+\headcommand {\beamer@subsectionpages {18}{19}}
+\headcommand {\sectionentry {5}{References}{20}{References}{0}}
+\headcommand {\beamer@sectionpages {20}{19}}
+\headcommand {\beamer@subsectionpages {20}{19}}
+\headcommand {\sectionentry {6}{\translate {References}}{20}{\translate {References}}{0}}
+\headcommand {\slideentry {6}{0}{0}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@partpages {1}{20}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@sectionpages {20}{20}}
+\headcommand {\beamer@documentpages {20}}
+\headcommand {\gdef \inserttotalframenumber {20}}

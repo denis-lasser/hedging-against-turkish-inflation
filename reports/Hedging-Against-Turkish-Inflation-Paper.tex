@@ -314,6 +314,8 @@ for a given level of risk. The efficient frontier is derived by varying
 \(R_{\text{target}}\) and solving the optimization problem for each
 level of return.
 
+To ensure the robustness of the results, the Markowitz portfolio optimization is presented using both the median and mean real risk-free rate adjusted for Turkish inflation. This approach allows the assessment of portfolio outcomes under different assumptions about the risk-free rate in a highly volatile inflation environment. While US government bonds provide positive nominal yields, the much higher inflation in Turkey results in negative real returns when adjusted to the local inflation rate. Despite this, using the real return is appropriate as it ensures consistency with the inflation-adjusted returns of other assets, reflecting the actual economic conditions faced by investors in terms of purchasing power. 
+
 \section{Results}\label{results}
 \subsection{Real Return of Individual Assets}
 \textbf{a) Turkish Stocks}
@@ -369,10 +371,6 @@ Comparing the assets, one can conclude for the period from January 2018 to Septe
 
 \subsection{Markowitz Portfolio Optimization}
 
-The Markowitz portfolio optimization model uses real returns to accurately measure the trade-off between risk and return by accounting for inflation's impact on purchasing power. Adjusting the risk-free rate to Turkish inflation ensures consistency across all asset returns and allows the optimization to reflect the true economic environment faced by investors.
-
-To ensure the robustness of the results, the Markowitz portfolio optimization is presented using both the median and mean real risk-free rate adjusted for Turkish inflation. This approach allows the assessment of portfolio outcomes under different assumptions about the risk-free rate in a highly volatile inflation environment. While US government bonds provide positive nominal yields, the much higher inflation in Turkey results in negative real returns when adjusted to the local inflation rate. Despite this, using the real return is appropriate as it ensures consistency with the inflation-adjusted returns of other assets, reflecting the actual economic conditions faced by investors in terms of purchasing power. 
-
 Portfolio allocation using the mean real return of the US 10y Gov Bond (-20.87\%):
 
 \begin{itemize}
@@ -417,7 +415,7 @@ It is also worth noting that the Markowitz optimization is purely mathematical a
 
 \section{Conclusion and Future Research}\label{conclusion}
 
-This study demonstrates that Turkish real estate is the most effective hedge against inflation over the period analyzed. It also dominates the Markowitz portfolio due to its high real returns and relatively lower risk compared to other assets. While stocks and Bitcoin provide additional diversification, their contributions are limited by their high volatility. Bonds and gold, traditionally seen as safe havens, have not performed well enough in the Turkish context to justify inclusion in the portfolio. The resulting portfolio offers high expected returns but comes with significant volatility, making it suitable only for risk-tolerant investors. As mentioned above, in an inflationary environment, preserving purchasing power often means accepting higher volatility.
+This study highlights the sensitivity of portfolio allocation to the choice of the real risk-free rate in inflation-adjusted Markowitz optimization. Turkish real estate emerges as a key portfolio component due to its relatively high real returns and alignment with inflationary trends. However, the resulting portfolio achieves high expected returns at the cost of significant volatility, particularly when the median real risk-free rate is applied.
 
 Future research could look into areas such as: 
 \begin{itemize}
